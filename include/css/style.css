@@ -1,0 +1,279 @@
+html
+{
+	width:100%;
+	height:100%;
+}
+body
+{
+	margin:0;
+	padding:0;
+	width:100%;
+	height:100%;
+	font-family:arial !important;
+	font-size:15px !important;
+	background:#fff;
+}
+
+.container
+{
+	width:100%;
+	max-width:400px;
+	height:100%;
+	max-height:600px;
+	background:#fff;
+	border:solid 1px #aaa;
+	text-align:center;
+	box-shadow:0 0 15px #333;
+	background:#eee;
+}
+
+.tafelspanel
+{
+	margin:5%;
+}
+.tafelspanel span
+{
+	display:block;
+	float:left;
+	background:#ff6600;
+	margin:5px;
+	padding:10px;
+	box-sizing: border-box;
+	border-radius:15px;
+	cursor:pointer;
+	color:#fff;
+	font-weight:bold;
+	vertical-align:middle;
+	text-align:center;
+	font-size:25px;
+	
+}
+.tafelpanel
+{
+margin:0px 0px;
+position:relative;
+height:100%;
+}
+
+header
+{
+	background:#ff6600;
+	padding:8px 12px;
+	border:0;
+	height:35px;
+	line-height:35px;
+}
+
+header .back
+{
+	position:absolute;
+	left:10px;
+	color:#fff;
+	font-size:20px;
+	font-weight:bold;
+	cursor:pointer;
+}
+header h2
+{
+	color:#fff;
+	margin:0;padding:0;
+}
+
+.scorepanel
+{
+	position:absolute;
+	top:50px;
+	width:100%;
+	padding: 8px 15px;
+	box-sizing:border-box;
+	left:0px;
+	background:#777;
+	color:#eee;
+	text-align:center;
+	font-size:16px !important;
+}
+
+.scorepanel span.tijdlocatie
+{
+	display:inline-block;
+	position:absolute;
+	top:8px;
+	left:10px;
+}
+
+.scorepanel span.vragenlocatie
+{
+	display:inline-block;
+
+}
+.scorepanel span.goedlocatie
+{
+	display:inline-block;
+	position:absolute;
+	top:8px;
+	right:10px;
+}
+
+
+
+.somantwoordpanel
+{
+position:absolute;
+width:100%;
+height:310px;
+top:50%;
+margin-top:-155px;
+}
+
+.sompanel
+{
+	position:absolute;
+	top:0px;
+	height:100px;
+	width:100%;
+	text-align:center;
+}
+
+.sompanel div
+{
+	width:60px;
+	height:80px;
+	font-size:30px;
+	line-height:80px;
+	display:inline-block;
+}
+
+.sompanel div.getal1,
+.sompanel div.getal2
+{
+	width:90px;
+	font-size:55px;
+	border:solid 1px silver;
+	border-radius:5px;
+	background:#fff;
+	box-shadow:1px 1px 2px #666;
+}
+
+
+.antwoordpanel
+{
+	position:absolute;
+	top:90px;
+	height:100px;
+	width:100%;
+	text-align:center;
+}
+
+.antwoordpanel h2
+{
+	margin-bottom:6px;
+	padding-bottom:0px;}
+
+.antwoord
+{
+	width:120px;
+	border:solid 1px #ccc;
+	border-radius:15px;
+	font-size:40px;
+	height:40px;
+	margin:auto;
+	padding:10px 20px;
+	background:#fff;
+	box-shadow:inset 1px 1px 3px #555;
+}
+
+.actionpanel 
+{
+display:block;
+margin:auto;
+width:60%;
+}
+
+.actionpanel div
+{
+	display:inline-block;
+	border-radius:12px;
+	font-size:20px;
+	color:#fff;
+	padding:10px 15px;
+	margin-top:20px;
+	cursor:pointer;
+	
+}
+.actionpanel div.ok
+{
+	background-color:green;
+	margin-right:12px;
+}
+.wis
+{
+	background-color:gray;
+}
+
+.nummerbord
+{
+	position:absolute;
+	bottom:0;
+	left:6px;
+	height:120px;
+	width:100%;
+}
+.nummerbord span
+{
+	display:block;
+	float:left;
+	background:#ff6600;
+	margin:4px;
+	padding:10px;
+	box-sizing: border-box;
+	cursor:pointer;
+	color:#fff;
+	font-weight:bold;
+	vertical-align:middle;
+	text-align:center;
+	font-size:25px;
+	width:17%;
+}
+
+.checkpanel,
+.finishpanel
+{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	display:none;
+	z-index:100;
+	text-align:center;
+	font-size:20px;
+	line-height:28px;
+}
+.finishpanel
+{
+	background:#fff;
+}
+.finishpanel p
+{
+	line-height:50px;
+}
+
+.finishpanel h2
+{
+	margin-top:40px;
+	color:#ff6600;
+	font-size:50px;
+}
+.finishpanel a
+{
+	color:#fff;
+	text-decoration:none;
+	background:#ff6600;
+	display:inline-block;
+	padding:4px 15px;
+}
+
+.finishpanel .punten
+{
+font-size:40px;
+}
