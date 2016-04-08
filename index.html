@@ -1,0 +1,118 @@
+<html>
+<head>
+
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+
+    <link rel="stylesheet" type="text/css" href="include/css/style.css?version=<?php echo $AppVersion ?>">
+
+
+    <!-- jquery -->
+    <script src="include/javascript/jquery-1.11.3.min.js?version=<?php echo $AppVersion ?>"></script>
+	<script src="include/javascript/jquery-ui.min.js?version=<?php echo $AppVersion ?>"></script>
+	<script src="include/javascript/jquery.ui.touch-punch.min.js?version=<?php echo $AppVersion ?>"></script>
+
+	<!-- javascript -->
+    <script src="include/javascript/helperfunctions.js?version=<?php echo $AppVersion ?>"></script>
+    <script src="include/javascript/appfunctions.js?version=<?php echo $AppVersion ?>"></script>
+ 	
+	
+	
+	<script>
+
+	$(function() 
+	{
+		$(".container").center();
+	  
+		$(".tafelspanel").show();
+		$(".tafelpanel").hide();
+		$(".nummerbord").hide();
+	  
+		MakeTafels();
+		MakeNummerbord();
+	  	  
+		$(".tafelspanel span").each(function()
+		{
+			$(this).attr("onclick","GoToTafel(" + $(this).html() + ")");
+			
+		});
+
+		$(".nummerbord span").each(function()
+		{
+			$(this).attr("onclick","MakeAntwoord(" + $(this).html() + ")");
+		});
+
+		$(".tafelspanel span").css("width",($(".tafelspanel").width() - 30)/3);
+		$(".tafelspanel span").css("height",($(".tafelspanel span").width()));
+		$(".tafelspanel span").css("line-height",$(".tafelspanel span").height() + "px");
+
+	});
+	</script>
+	
+	
+</head>
+<body>
+	<div class="container">
+	
+		<!-- beginscharm -->
+		<div id="homepage" class="homepage">
+			<h1>Tafels oefenen!</h1>
+			<p>Druk op een van de nummers om de tafel te oefenen</p>
+			<div id="tafelspanel" class="tafelspanel"></div>
+		</div>
+		
+		<!-- tafel pagina -->
+		<div id="tafelpanel" class="tafelpanel">
+
+			<header>
+				<span class="back" onclick="GoBackToMainMenu()"><</span>
+				<h2>De tafel van: <span></span></h2>
+			</header>
+			
+			<div class="scorepanel">
+				<span class="tijdlocatie">Tijd: <span class="timerpanel"></span></span>
+				<span class="vragenlocatie">Vraag:  <span class="aantalvragenpanel"><span class="aantalvragen"></span>/<span class="totaalaantalvragen">10</span></span></span>
+				<span class="goedlocatie">Goed: <span class="aantalgoedeantwoorden">0</span></span>
+			</div>
+			
+			<div class="somantwoordpanel">
+
+				<div class="sompanel">
+					<div class="getal1"> </div>
+					<div class="keer">X</div>
+					<div class="getal2"></div>
+				</div>
+
+				<div class="antwoordpanel">
+					<h2>Antwoord</h2>
+					<div class="antwoord"></div>
+
+					<div class="actionpanel">
+						<div class="ok" onclick="CheckSum();">Ok</div>
+						<div class="wis" onclick="ClearAntwoord();">Wis</div>
+					</div>
+				</div>
+				
+			</div>
+				
+			<div id="nummerbord" class="nummerbord"></div>
+
+		</div>
+		
+		<!-- checkpagina  goed / fout flits -->
+		<div class="checkpanel"></div>
+
+		<!-- finishpanel -->
+		<div class="finishpanel">
+			<h2>Klaar!</h2>
+			<p>Aantal goede antwoorden:</p> <p> <span class="punten aantalgoed"></span> van de <span class="punten aantalvragen"></span></p>
+			<p>Tijd die je er over hebt gedaan:</p>
+			<p><span class="punten timer"></span> seconden</P>
+			
+			<p><a href="javascript:GoBackToMainMenu()">Terug naar menu</a></p>
+		</div>
+
+		
+	</div>
+</body>
+</html>
