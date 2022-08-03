@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'Ticketplanner'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C1F6E9D1BC0F40CA8756C20D8F760080 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_700721BFEA1B4BF1A6E677383951B4AF }}
           package: .
